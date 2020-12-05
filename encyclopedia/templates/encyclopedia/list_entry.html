@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+{% if messages %}
+<div>
+    {% for message in messages %}
+        <h2>{{ message }}</h2>
+    {% endfor %}
+
+</div>
+    
+{% endif %}
+
+<h1>List of Entries</h1>
+{% for data in dataset %}  
+    <li>
+        <a href="{% url 'detail_entry' data.id %}">{{ data.title }}</a>
+        <a href="{% url 'update_entry' data.id %}">(Update)</a>
+        
+    </li>   
+  
+{% endfor %} 
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+{% block body %} 
+{% load markdown_extras %}
+
+    <h1>{{ mychoice.title }}</h1>
+    {{content| markdown | safe }}
+
+    
+
+
+{% endblock %}

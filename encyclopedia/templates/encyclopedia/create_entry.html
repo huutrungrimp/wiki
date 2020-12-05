@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+{% load markdown_extras %}
+    <h1>Add your new entry </h1>  
+    
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {{ form.as_p | markdown | safe  }} 
+        
+        <input type="submit" value="Save">
+    </form>
+    
+{% endblock %}
