@@ -6,11 +6,15 @@
 
 {% block body %}
     <h1>All Pages</h1>
-
-    <ul>
+    
+    <table id="">
         {% for entry in entries %}
-            <li> <a href="wiki/{{entry}}">{{ entry }}</a></li>
+        <tr>
+            <td style="width:10%"><a href="wiki/{{entry}}">{{ entry }}</a></td>
+            <td style="width:10%"><a href="entry/{{entry}}/update/">Edit</a> </td>
+            <td style="width:10%"><a href="detailentry/{{entry}}/">View in HTML</a> </td>
+        </tr>
         {% endfor %}
-    </ul>
+    </table> 
 
 {% endblock %}

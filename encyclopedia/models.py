@@ -2,8 +2,7 @@ from django.db import models
 from django.core.exceptions import ValidationError
 
 class MyEntries(models.Model):
-    id = models.IntegerField(default=1,null=False,primary_key=True)
-    title = models.CharField(max_length = 20)
+    title = models.CharField(max_length = 20, unique=True)
     content = models.TextField()
     
     class Meta:

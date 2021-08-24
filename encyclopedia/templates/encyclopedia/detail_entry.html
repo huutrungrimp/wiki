@@ -4,11 +4,7 @@
 {% load markdown_extras %}
 <div>
     <form action="" method="post">
-        <h1>{{ form.title }}</h1>
-        {{ form.content| markdown | safe }}
-       
-        <a href="{% url 'update_entry' form.id %}">Edit</a>
-       
+        {{ form.content| markdown | safe }}    
     </form>
    
 </div>
